@@ -1,32 +1,11 @@
 
-"#########下面为vundel#############
+filetype on 
 
-filetype off  
+syntax enable
 
-" 此处规定Vundle的路径  
-
-set rtp+=$VIM/vimfiles/bundle/vundle/  
-
-call vundle#rc('$VIM/vimfiles/bundle/')  
-
-Bundle 'gmarik/vundle'  
-
-filetype plugin indent on  
-
-" original repos on github  
-
-Bundle 'mattn/zencoding-vim'  
-
-Bundle 'drmingdrmer/xptemplate'  
-
-" vim-scripts repos  
-
-Bundle 'vim-markdown'  
-
-filetype plugin indent on " required!!
-
-
-
+"==========================================
+" 字符设置
+"==========================================
 
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
@@ -61,19 +40,26 @@ autocmd! bufwritepost _vimrc source %
 " 主题设置
 "==========================================
 " theme主题
-"set background=dark
+set background=dark
 "set background=blue
-set t_Co=256
+"set t_Co=256
 
+
+
+
+let g:solarized_termcolors=256
 
 colorscheme solarized
-" colorscheme molokai
+"colorscheme molokai
 " colorscheme desert
 
 
 
 " 按退格键时可以一次删掉 4 个空格
 set softtabstop=4
+
+
+
 
 
 "启用行号
@@ -123,3 +109,21 @@ set scrolloff=7
 "endfunction
 
 
+
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guifont=Inconsolata:h12
+    if has("gui_gtk2")   "GTK2
+        set guifont=Inconsolata\ 12,Inconsolata\ 12
+    endif
+ "   set guioptions-=T
+ "   set guioptions+=e
+  "  set guioptions-=r
+  "  set guioptions-=L
+  "  set guitablabel=%M\ %t
+    set showtabline=1
+    set linespace=2
+    set noimd
+    set t_Co=256
+endif
