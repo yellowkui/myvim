@@ -4,7 +4,7 @@ filetype on
 syntax enable
 
 "==========================================
-" 字符设置
+" 字符编码设置
 "==========================================
 
 set nocompatible
@@ -25,7 +25,7 @@ language messages zh_CN.utf-8
 
 au BufRead *.py map <buffer> <F5> :w<CR>:! python % <CR>
 
-"设置TAB为4个空格,python必备
+"设置TAB为4个空格c
 set ts=4  
 set expandtab
 
@@ -127,3 +127,37 @@ if has("gui_running")
     set noimd
     set t_Co=256
 endif
+
+
+
+
+
+"airline
+
+let g:airline_theme="dark""
+
+  set rtp+=E:\Vim\vimfiles\Bundle\vim-airline
+    set rtp+=E:\Vim\vimfiles\Bundle\vim-airline-themes
+
+
+
+ let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_exclude_filename = []
+let g:Powerline_symbols='fancy'
+let g:airline_powerline_fonts=0
+let Powerline_symbols='fancy'
+let g:bufferline_echo=0
+set laststatus=2
+set t_Co=256
+"set fillchars+=stl:\ ,stlnc:\i 
+
+
+"let g:airline_theme="solarized"
+
