@@ -11,7 +11,6 @@ set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
 set encoding=utf-8 
 set termencoding=utf-8 
 set fileencoding=utf-8 
@@ -25,9 +24,7 @@ language messages zh_CN.utf-8
 
 au BufRead *.py map <buffer> <F5> :w<CR>:! python % <CR>
 
-"设置TAB为4个空格c
-set ts=4  
-set expandtab
+
 
 "==========================================
 " 其它设置
@@ -53,7 +50,10 @@ colorscheme solarized
 "colorscheme molokai
 " colorscheme desert
 
-
+"设置TAB为4个空格c
+set ts=4  
+set sw=4
+set expandtab
 
 " 按退格键时可以一次删掉 4 个空格
 set softtabstop=4
@@ -81,6 +81,7 @@ set showmode
 set scrolloff=7
 
 "这里还缺少
+
 
 
 
